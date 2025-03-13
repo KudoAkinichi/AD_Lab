@@ -37,16 +37,43 @@
       .section-content {
         margin-left: 20px;
       }
-      .job-title {
-        font-weight: bold;
-      }
-      .project-details {
-        margin-left: 20px;
-      }
-      .skills-list {
+
+      /* Project Menu Styles */
+      .projects-menu {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
+        margin-bottom: 20px;
+      }
+      .project-link {
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: #333;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .project-link:hover {
+        background-color: #e0e0e0;
+      }
+
+      /* Project Details Styles */
+      .project-details {
+        display: none;
+        background-color: #f9f9f9;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #eee;
+      }
+
+      /* CSS-only toggle mechanism */
+      .project-details:target {
+        display: block;
+      }
+      .project-details ul {
+        padding-left: 20px;
       }
     </style>
   </head>
@@ -101,99 +128,96 @@
     </div>
 
     <h2>PROJECTS</h2>
-    <div class="section-content">
-      <div>
-        <strong>QuirkSpace</strong> - OCTOBER 2023
-        <div class="project-details">
-          <ul>
-            <li>
-              It is a fully functional social media web app with CRUD
-              operations, like creating, deleting, reading and updating posts.
-            </li>
-            <li>
-              It uses AppWrite as a backend and database which provides flexible
-              schema so that multiple users can engage with each others posts.
-            </li>
-            <li>
-              Technologies used are: React Js, Typescript, Tanstack Query,
-              tailwind CSS, AppWrite.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <strong>AudioVerse</strong> - AUGUST 2023
-        <div class="project-details">
-          <ul>
-            <li>
-              It is a fully functional music web app with an audio player and
-              which is fetching data from Shazam API and state updation in
-              multiple places.
-            </li>
-            <li>
-              Technologies used are: React Js, Redux, tailwind CSS, Rapid API,
-              Swiper Js
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <strong>MINI-GRAM</strong> - JUNE 2023
-        <div class="project-details">
-          <ul>
-            <li>
-              It is a website similar to Instagram website with several pages
-              and uses react and next JS.
-            </li>
-            <li>
-              Made the explore page for this website along with other teammates
-              in this project under IoT.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <strong>VEP</strong> - MAY 2023
-        <div class="project-details">
-          <ul>
-            <li>
-              This website is made based on figma design given by IoT Labs KIIT
-              to learn, apply and practice my react skills.
-            </li>
-            <li>
-              It is a website with sign up and sign in pages with several steps
-              in them along with a dashboard showing transactions, the whole
-              projects focus mainly on the UI.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <strong>GLOBAL SUCCESS SYSTEMS</strong> - February 2023
-        <div class="project-details">
-          <ul>
-            <li>
-              A Website made with HTML, CSS and JS for KIIT IoT recruitment.
-            </li>
-            <li>
-              Created this website on VS Code by adapting the design made on
-              Figma.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <strong>CORONA MAP</strong>
-        <div class="project-details">
-          <ul>
-            <li>
-              It is a dashboard which shows number of COVID cases all over the
-              world.
-            </li>
-            <li>Uses HTML and JS along with map box.</li>
-          </ul>
-        </div>
-      </div>
+    <div class="projects-menu">
+      <a href="#quirkspace" class="project-link">QuirkSpace</a>
+      <a href="#audioverse" class="project-link">AudioVerse</a>
+      <a href="#mini-gram" class="project-link">MINI-GRAM</a>
+      <a href="#vep" class="project-link">VEP</a>
+      <a href="#global-success" class="project-link">Global Success Systems</a>
+      <a href="#corona-map" class="project-link">CORONA MAP</a>
+    </div>
+
+    <div id="quirkspace" class="project-details">
+      <strong>QuirkSpace</strong> - OCTOBER 2023
+      <ul>
+        <li>
+          It is a fully functional social media web app with CRUD operations,
+          like creating, deleting, reading and updating posts.
+        </li>
+        <li>
+          It uses AppWrite as a backend and database which provides flexible
+          schema so that multiple users can engage with each others posts.
+        </li>
+        <li>
+          Technologies used are: React Js, Typescript, Tanstack Query, tailwind
+          CSS, AppWrite.
+        </li>
+      </ul>
+    </div>
+
+    <div id="audioverse" class="project-details">
+      <strong>AudioVerse</strong> - AUGUST 2023
+      <ul>
+        <li>
+          It is a fully functional music web app with an audio player and which
+          is fetching data from Shazam API and state updation in multiple
+          places.
+        </li>
+        <li>
+          Technologies used are: React Js, Redux, tailwind CSS, Rapid API,
+          Swiper Js
+        </li>
+      </ul>
+    </div>
+
+    <div id="mini-gram" class="project-details">
+      <strong>MINI-GRAM</strong> - JUNE 2023
+      <ul>
+        <li>
+          It is a website similar to Instagram website with several pages and
+          uses react and next JS.
+        </li>
+        <li>
+          Made the explore page for this website along with other teammates in
+          this project under IoT.
+        </li>
+      </ul>
+    </div>
+
+    <div id="vep" class="project-details">
+      <strong>VEP</strong> - MAY 2023
+      <ul>
+        <li>
+          This website is made based on figma design given by IoT Labs KIIT to
+          learn, apply and practice my react skills.
+        </li>
+        <li>
+          It is a website with sign up and sign in pages with several steps in
+          them along with a dashboard showing transactions, the whole projects
+          focus mainly on the UI.
+        </li>
+      </ul>
+    </div>
+
+    <div id="global-success" class="project-details">
+      <strong>GLOBAL SUCCESS SYSTEMS</strong> - February 2023
+      <ul>
+        <li>A Website made with HTML, CSS and JS for KIIT IoT recruitment.</li>
+        <li>
+          Created this website on VS Code by adapting the design made on Figma.
+        </li>
+      </ul>
+    </div>
+
+    <div id="corona-map" class="project-details">
+      <strong>CORONA MAP</strong>
+      <ul>
+        <li>
+          It is a dashboard which shows number of COVID cases all over the
+          world.
+        </li>
+        <li>Uses HTML and JS along with map box.</li>
+      </ul>
     </div>
 
     <h2>EXTRACURRICULAR</h2>
@@ -230,5 +254,7 @@
         tech domains
       </div>
     </div>
+
+    <!-- Rest of the resume remains the same -->
   </body>
 </html>
